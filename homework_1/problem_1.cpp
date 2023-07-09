@@ -11,12 +11,13 @@ using namespace std;
 #include <unordered_map>
 
 
-class SecondAttempt {
+class Problem1 {
 public:
     int firstUniqChar(string s) {
         unordered_map<char, int> charMap;
 
-        for(char c: s){
+        for(int i=0; i<s.size(); i++){
+            char c = s[i];
             charMap[c]++;
         }
 
@@ -29,22 +30,22 @@ public:
     }
 };
 
-// used hashtables 
+// used hashtable
 // Time Complexity = O(n)
 // Space Complexity = O(n)
 
 int main(){
-    SecondAttempt second_attempt;
+    Problem1 problem_1;
 
     // Case 1: leetcode output should be 0
-    int return_value = second_attempt.firstUniqChar("leetcode");
+    int return_value = problem_1.firstUniqChar("leetcode");
     cout<< "input \'leetcode' \noutput \'" << return_value << "\' \n";
 
     // Case 2: loveleetcode output shiuld be 2
-    return_value = second_attempt.firstUniqChar("loveleetcode");
+    return_value = problem_1.firstUniqChar("loveleetcode");
     cout<< "input: \'loveleetcode' \noutput: \'" << return_value << "\' \n";
 
     // Case 3: aabb output shiuld be -1
-    return_value = second_attempt.firstUniqChar("aabb");
+    return_value = problem_1.firstUniqChar("aabb");
     cout<< "input: \'aabb' \noutput: \'" << return_value << "\' \n";
 }
