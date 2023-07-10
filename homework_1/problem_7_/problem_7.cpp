@@ -45,7 +45,7 @@ public:
 };
 
 
-// Time Complexity = O(n)
+// Time Complexity = O(log x)
 // Space Complexity = O(1)
 
 int main(){
