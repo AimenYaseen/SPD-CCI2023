@@ -41,9 +41,10 @@ public:
 
 void print_vector(vector<int>& vec){
     cout<<'[';
-    for(int i = 0; i < vec.size(); i++)
+    for(int i = 0; i < vec.size(); i++){
         cout << vec[i] << ' ';
         cout<<',';
+    }
     cout<<']'<<endl;
 }
 
@@ -52,7 +53,6 @@ int main(){
 
     vector<int> V1({1,2,3,4,5,6,7});
     vector<int> V2({-1,-100,3,99});
-    vector<int> V3({3, 3});
 
     // Case 1: leetcode output should be [5,6,7,1,2,3,4]
     problem_8.rotate(V1, 3);
