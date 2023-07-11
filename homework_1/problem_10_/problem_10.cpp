@@ -1,5 +1,5 @@
 /*
-Problem 1: Sort Colors
+Problem 10: Sort Colors
 ●  Difficulty: Medium
 ●  Estimated Time: 60 minutes
 ●  Problem Link: https://leetcode.com/problems/sort-colors
@@ -10,7 +10,7 @@ Problem 1: Sort Colors
 
 using namespace std;
 
-class Problem1 {
+class Problem10 {
 public:
     void sortColors(vector<int>& nums) {
         int start=0, end=nums.size()-1;
@@ -46,16 +46,16 @@ void print_vector(vector<int>& vec){
 }
 
 int main(){
-    Problem1 problem_1;
+    Problem10 problem_10;
 
     vector<int> V1({2,0,2,1,1,0});
     vector<int> V2({2, 0, 1});
 
     // Case 1: leetcode output should be [0,0,1,1,2,2]
-    problem_1.sortColors(V1);
+    problem_10.sortColors(V1);
     print_vector(V1);
 
     // Case 2: loveleetcode output should be [0, 1, 2]
-    problem_1.sortColors(V2);
+    problem_10.sortColors(V2);
     print_vector(V2);
 }
