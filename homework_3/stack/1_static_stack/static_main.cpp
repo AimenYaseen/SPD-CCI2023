@@ -21,9 +21,9 @@ int main(){
     }
 
     // pop
-    cout << "Pop 18: " << stack.pop() << endl;
     cout << "Pop 9: " << stack.pop() << endl;
     cout << "Pop -1: " << stack.pop() << endl;
+    cout << "Pop 6: " << stack.pop() << endl;
 
     // top
     if (!stack.isEmpty()){
@@ -31,13 +31,12 @@ int main(){
     }
 
     // pop
-    cout << "Pop 6: " << stack.pop() << endl;
     cout << "Pop 1: " << stack.pop() << endl;
     cout << "Pop 10: " << stack.pop() << endl;
     cout << "Pop: " << stack.pop() << endl; // prints false
 
     // top => it will not be executed as stack is empty
     if (!stack.isEmpty()){
-        cout << "Stack top: " << stack.top() << endl; // 18
+        cout << "Stack top: " << stack.top() << endl; 
     }
 }
