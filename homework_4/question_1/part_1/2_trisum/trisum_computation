@@ -1,0 +1,8 @@
+// Trisum Mathematical Computation
+
+T(n) = {
+    return 1     n=0
+    return 2     n=1
+    return 3     n=2
+    return T(n-1) + T(n-2) + T(n-3)  n>=3
+}
