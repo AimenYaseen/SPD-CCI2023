@@ -1,0 +1,7 @@
+// Fibonacci Mathematical Computation
+
+F(n) = {
+    1     n=1
+    0     n=0
+    F(n-1) + F(n-2) n>=2
+}
