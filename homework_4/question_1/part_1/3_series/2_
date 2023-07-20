@@ -1,0 +1,15 @@
+// 1+3+5+7+....+N (where N must be odd)
+// n must be an odd integer
+// n % 2 == 1
+
+S(i, n) = {
+    i + S(i+2, n)    i<n
+    n                i=n
+}
+
+OR
+
+S(n) = {
+    1             n=1
+    n + S(n - 2)  n>0
+}
