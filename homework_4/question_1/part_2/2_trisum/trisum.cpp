@@ -4,9 +4,9 @@ using namespace std;
 
 
 int trisum_series(int n){
-    // base case
-    if(n == 0 || n == 1 || n == 2){
-        return n+1;
+
+    if(n == 0 || n == 1 || n == 2 || n == 3){
+        return n;
     }
     
     return trisum_series(n-1) + trisum_series(n-2) + trisum_series(n-3);
@@ -14,6 +14,11 @@ int trisum_series(int n){
 
 
 int main(){
-    // n starts from 0, so it returns n + 1 element
-    cout<<trisum_series(4) << endl; // 1, 2, 3, 6, 11
+    // returns nth trisum; n starts from 1
+    cout<<trisum_series(4) << endl; // 1, 2, 3, 6
 }
+
+/*
+Time Complexity = O(3^n)
+Space Complexity = O(n)
+*/
