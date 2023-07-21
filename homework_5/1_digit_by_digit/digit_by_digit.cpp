@@ -1,3 +1,10 @@
+/*
+Digit by Digit Print: 
+Given a number x, print the digits of X line by line. 
+Print the digits left to right, and right to left. 
+Lesson in this problem: Working before and after the recursive call
+*/
+
 using namespace std;
 
 #include <iostream>
