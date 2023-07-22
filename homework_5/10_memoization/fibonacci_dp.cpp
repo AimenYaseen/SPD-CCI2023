@@ -14,7 +14,7 @@ long long Fib(int n, vector<int>& Vs){
         return Vs[n];
     }
 
-    return Fib(n-1, Vs) + Fib(n-2, Vs);
+    return Vs[n] = Fib(n-1, Vs) + Fib(n-2, Vs);
 }
 
 long long Fib(int n)
