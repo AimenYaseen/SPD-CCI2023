@@ -13,10 +13,16 @@ using namespace std;
 
 int magic_index(int left, int right, vector<int> numbers)
 {
-    int mid = (left + right) / 2;
+    int mid = (left + right) / 2; // mid index
 
-    if(numbers[mid] == mid)
-        return mid;
+    if(left > right) // if magic index is not found
+        return -1;
+    else if(numbers[mid] < mid)
+        return magic_index(left, mid - 1, numbers);
+    else if(numbers[mid] > mid)
+        return magic_index(mid + 1, right, numbers);
+    else
+        return mid;  // if mid number == mid index return
 }
 
 
@@ -26,3 +32,8 @@ int main()
     vector<int> numbers({-1, 0, 2, 7, 8});
     cout << "Magic index of {-1, 0, 2, 7, 8} is " << magic_index(0, numbers.size()-1, numbers) << endl; // 2
 }
+
+/*
+The above solution has a problem.
+{-10, 0, 1, 1, 4, 20} // It will return -1 in this case but the correct answer is 4.
+*/ 

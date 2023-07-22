@@ -27,4 +27,8 @@ int main()
     // Case 1: Magic index of {-1, 0, 2, 7, 8}
     vector<int> numbers({-1, 0, 2, 7, 8});
     cout << "Magic index of {-1, 0, 2, 7, 8} is " << magic_index(numbers) << endl; // 2
+
+    // Case 2: Magic index of {-10, 0, 1, 1, 4, 20}
+    vector<int> numbers2({-10, 0, 1, 1, 4, 20});
+    cout << "Magic index of {-10, 0, 1, 1, 4, 20} is " << magic_index(numbers2) << endl; // 4
 }
