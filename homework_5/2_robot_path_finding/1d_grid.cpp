@@ -23,7 +23,7 @@ long long path_finding_1d(int n, vector<int>& possibilities)
         return possibilities[n];
     }
 
-    return path_finding_1d(n-1, possibilities) + path_finding_1d(n-2, possibilities);
+    return possibilities[n] = path_finding_1d(n-1, possibilities) + path_finding_1d(n-2, possibilities);
 }
 
 
