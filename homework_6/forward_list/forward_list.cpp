@@ -30,11 +30,21 @@ int main()
         cout << *i << " ";
     }
 
+    // ------------------ DELETE AT END --------------------------------
+
+    fList.deleteAtEnd(); // H=3; N2=5;
+
+    cout << endl << "\nLinked List Values after 'Delete at End' : ";
+    for(ForwardList<int>::Iterator i = fList.begin(); i != fList.end(); ++i)
+    {
+        cout << *i << " ";
+    }
+
     // -------------------- INSERT AFTER --------------------------------
 
     // insert at position 2
     ForwardList<int>::Iterator it = fList.begin(); // it is at head
-    fList.insertAfter(it, 0); // H=3; N1=0; N2=5; T=10;
+    fList.insertAfter(it, 0); // H=3; N1=0; N2=5;
 
     cout << endl << "\nLinked List Values after 'Insert After' : ";
     for(ForwardList<int>::Iterator i = fList.begin(); i != fList.end(); ++i)

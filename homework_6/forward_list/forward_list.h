@@ -80,6 +80,29 @@ public:
         delete node;
     }
 
+    // ------------------------- DELETE AT END -----------------------------------
+
+    void deleteAtEnd()
+    {
+        if(!Head)  // If list is empty
+            return;
+
+        if(Head -> next == nullptr)  // if there is only one node
+            Head = Tail = nullptr;
+
+        Node* node = Head -> next;  // node to be deleted
+        Node* prev = Head;  // previous node
+
+        while(node -> next)  // iterate to the last 
+        {
+            prev = node;
+            node = node -> next;
+        }
+        
+        prev -> next = nullptr; // break the last connection
+        delete node;
+    }
+
     // ----------------------------- ITERATOR --------------------------------------
 
     class Iterator
@@ -137,4 +160,5 @@ public:
         auto* newNode = new Node(val, current -> next);
         current -> next = newNode;
     }
+
 };
