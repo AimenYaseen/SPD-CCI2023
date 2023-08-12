@@ -1,0 +1,13 @@
+// Binary Search Computation
+
+B(arr[], l, r, n) = {
+    -1                           l>r
+    (l + r)/2                    arr[(l + r)/2] = n
+    B(arr, (l + r)/2+1, r, n)    arr[(l + r)/2] > n
+    B(arr, l, (l + r)/2-1, n)    arr[(l + r)/2] < n
+}
+
+/*
+Time Complexity = O(log^n)
+Space Complexity = O(n)
+*/
