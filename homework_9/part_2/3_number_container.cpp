@@ -6,7 +6,9 @@ using namespace std;
 
 
 class NumberContainers {
+    // index, number
     map<int, int> m1;
+    // number, set of indexes
     map<int, set<int>> m2;
 public:
     NumberContainers() {}
@@ -16,7 +18,7 @@ public:
         if(m1.count(index) != 0)
         {
             int temp = m1[index];
-            m2[temp].erase(index); // erase its occurence from the numbers indexes set
+            m2[temp].erase(index); // erase the index from set which are going to change
         }
         m1[index] = number;
         m2[number].insert(index);
