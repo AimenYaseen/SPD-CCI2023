@@ -1,0 +1,20 @@
+// Selection Sort Mathematical Computation using Recursion
+
+FindMinIndex(arr, start, n, minIndex) = {
+    return minIndex              start >= n
+    minIndex = start             arr[start] < arr[minIndex]
+    return FindMinIndex(arr, start + 1, n, minIndex)
+}
+
+SelectionSort(arr, n, i) = {
+    return arr                          i >= n - 1
+    minIndex = FindMinIndex(arr, i, n, i)
+    swap(arr, i, minIndex)
+    return SelectionSort(arr, n, i + 1)
+}
+
+
+/*
+Time Complexity = O(n^2)
+Space Complexity = O(n)
+*/
