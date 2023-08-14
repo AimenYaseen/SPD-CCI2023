@@ -1,0 +1,12 @@
+// Power(X, Y, M) Mathematical Computation for log n
+
+Power(X, Y, M) = {
+    1                              Y=0
+    (Power(X, Y/2, M)^2 * X) % M   Y%2!=0
+    (Power(X, Y/2, M)^2) % M       Y%2=0
+}
+
+/*
+Time Complexity = O(log Y)
+Space Complexity = O(log Y) for call stack
+*/
