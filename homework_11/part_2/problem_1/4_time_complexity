@@ -1,0 +1,11 @@
+
+merge_sort(nums, l, mid)  // n/2
+merge_sort(nums, mid + 1, r) // n/2
+merge(nums, l, mid, r) // n
+
+// Merge Sort Recurrence
+T(n) = 2T(n/2) + n
+
+// n, 2n/2 = n    (same)
+// nlogn
+// O(nlogn)
