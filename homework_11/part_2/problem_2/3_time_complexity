@@ -1,0 +1,14 @@
+list<int> leftList(inputList.begin(), midIt);  // n/2
+list<int> rightList(midIt, inputList.end()); // n/2
+
+leftList = mergeSort(leftList); 
+rightList = mergeSort(rightList);
+
+mergeSortedLists(leftList, rightList);  // O(n)
+
+// Merge Sort Recurrence
+T(n) = 2T(n/2) + n
+
+// n, 2n/2 = n    (same)
+// nlogn
+// O(nlogn)
