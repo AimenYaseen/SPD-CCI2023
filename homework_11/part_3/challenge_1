@@ -1,0 +1,32 @@
+// find the case 3
+// a pair in which both says the other is trustworthy
+IsTrustworthyPair(person_1, person_2)
+    if (person_1 about person_2 -> trustworthy) and (person_2 about person_1 -> trustworthy)
+        return true
+    return false
+
+
+FindTrustWorthyPerson(persons)
+    // base case; if there is only 1 person left 
+    // he will be the trustworthy one
+    n = persons.size
+    if (n == 1)
+        return persons[1]
+
+    newPersons = []
+
+    for i from 1 to n by 2
+        if(IsTrustworthyPair(persons[i], persons[i+1]))
+            newPersons.add(persons[i])
+
+    if(n % 2 == 1)
+        newPersons.add(persons[n])
+
+    return FindTrustWorthyPerson(newPersons)
+
+function main():
+    persons = list of all 100 persons
+    trustworthyPerson = FindTrustWorthyPerson(persons)
+    ask trustworthyPerson about each person's trustworthiness
+    
+    Print the trustworthy and untrustworthy people
