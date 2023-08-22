@@ -1,0 +1,25 @@
+/*
+Which sequence of N element will generate the maximum entropy? 
+How much will be the value of entropy for such a sequence, 
+Tell the exact answer? 
+*/
+
+/*
+We will get the maximum entropy if values in an array are in
+decending order.
+
+Example:
+
+arr = {15, 10, 8, 6, 3}
+
+here entropy will be: 4+3+2+1 = 10
+it can be calculated as
+
+E(N) = [N * (N-1)] / 2
+// 5*4 = 20 / 2 = 10
+
+OR
+
+E(N) = N-1 + E(N-1); for N=1 return 1
+// 4+3+2+1 = 10
+*/
