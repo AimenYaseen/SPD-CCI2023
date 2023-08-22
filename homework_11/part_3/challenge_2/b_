@@ -1,0 +1,53 @@
+// This algorithm devides the array until there is only 1 element left
+// it divides the array just like we did in merge sort
+
+
+
+EqualImage(image_1, image_2)
+    if (image_1 == image_2)
+        return true
+    return false
+
+
+CountMaj(images, image, start, end):
+    count = 0
+    for i from start to end:
+        if Equal_images(images[i], image):
+            count += 1
+    return count
+
+
+FindMajorityImage(images, start, end):
+    # // Base case: Only one image, it's the majority image
+    if start == end:
+        return images[start]
+    
+    # // Divide the array
+    mid = (start + end) / 2
+    
+    # // Recursively find majority images in left and right halves
+    leftM = FindMajorityImage(images, start, mid)
+    rightM = FindMajorityImage(images, mid + 1, end)
+    
+    # // If both majority images are the same
+    if Equal_images(leftM, rightM):
+        return leftM
+    
+    # // Count occurrences of leftM and rightM
+    leftCount = CountMaj(images, leftM, start, end)
+    rightCount = CountMaj(images, rightM, start, end)
+    
+    # // Return the majority image with more occurrences
+    if leftCount > rightCount:
+        return leftM
+    else:
+        return rightM
+
+
+DetectFakeAccount(images):
+    n = images.size() - 1
+    majorityImage = FindMajorityImage(images, 0, n)
+    if CountMaj(images, majorityImage, 0, n) > n / 2:
+        return "Genuine Account"
+    else:
+        return "Fake Account Detected"
