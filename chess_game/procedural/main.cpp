@@ -7,7 +7,7 @@ using namespace std;
 
 int main()
 {
-    cout << "LET'S PLAY CHESS" << endl;
+    cout << " ----------- LET'S PLAY CHESS ------------------" << endl;
 
     string playerNames[2];
     char board[8][8];
@@ -15,5 +15,8 @@ int main()
     int sr, sc, er, ec;
 
     // initialization
-    
+    init(playerNames, board, turn);
+
+    // display board
+    displayBoard(board);
 }
