@@ -53,11 +53,11 @@ void initializeBoard(char board[][8])
             board[i][j] = ' ';
         
     // ------------ BLACK WILL BE SMALL --------------
-    char BE[6] = {'c', 'r', 'b', 'q', 'k', 'p'};
+    char BE[6] = {'r', 'h', 'b', 'q', 'k', 'p'};
     setBoardElements(board, BE, 0, 1);
 
     // ------------ WHITE WILL BE CAPITAL ------------
-    char WE[6] = {'C', 'R', 'B', 'Q', 'K', 'P'};
+    char WE[6] = {'R', 'H', 'B', 'Q', 'K', 'P'};
     setBoardElements(board, WE, 7, 6);
 }
 
@@ -70,4 +70,24 @@ void init(string playerNames[], char board[][8], int& turn)
     initializeBoard(board);
 
     turn = WHITE;
+}
+
+// display board
+void displayBoard(char board[][8])
+{
+    cout << endl << "    0   1   2   3   4   5   6   7" << endl;
+    cout << "  _________________________________" << endl;
+
+    for (int i = 0; i < 8; ++i) {
+        cout << i << " |";
+        for (int j = 0; j < 8; ++j) {
+            if (board[i][j] == '\0') {
+                cout << "  ";
+            } else {
+                cout << " " << board[i][j];
+            }
+            cout << " |";
+        }
+        cout << endl << "  _________________________________" << endl;
+    }
 }
