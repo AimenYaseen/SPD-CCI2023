@@ -42,6 +42,19 @@ public:
                 DFS(v);
         }
     }
+
+    void DFSCorrected()
+    {
+        // set visited false
+        for(int i = 0; i < visited.size(); i++)
+            visited[i] = false;
+
+        for(auto pair: adjList)
+        {
+            if(!visited[pair.first])
+                DFS(pair.first);
+        }
+    }
 };
 
 int main()
@@ -55,13 +68,21 @@ int main()
     g.addEdge(2, 0);
     g.addEdge(2, 3);
     g.addEdge(3, 3);
+    g.addEdge(4, 0); // source
 
     // print graph
     g.printGraph();
 
     // DFS 
+    // This traversal has a problem
+    // It will not traverse the vertex which is a source
+    // In this case it will be 4
     cout << "Depth First Search started from 0" << endl;
     g.DFS(0);
     cout << endl;
 
+    // Corrected version
+    cout << "Depth First Search Corrected version" << endl;
+    g.DFSCorrected();
+    cout << endl;
 }
