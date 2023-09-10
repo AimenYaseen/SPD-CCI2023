@@ -1,0 +1,7 @@
+// C(N, R) = C(N-1, R-1) + C(N-1, R)
+
+
+comb(n, r) = {
+    1                               r=0, r=n
+    comb(n-1, r-1) + comb(n-1, r)   r!=0, r!=n
+}

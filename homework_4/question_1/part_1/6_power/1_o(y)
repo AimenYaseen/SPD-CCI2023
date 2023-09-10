@@ -1,0 +1,11 @@
+// Power(X, Y, M) Mathematical Computation
+
+Power(X, Y, M) = {
+    1                            Y=0
+    (X * Power(X, Y-1, M)) % M   Y>0
+}
+
+/*
+Time Complexity = O(Y)
+Space Complexity = O(Y)
+*/

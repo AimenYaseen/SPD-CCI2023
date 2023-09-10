@@ -1,0 +1,12 @@
+// MULT(X, Y) Mathematical Computation
+
+MULT(X, Y) = {
+    0                              Y=0
+    (MULT(X, Y/2)^2)               Y%2=0
+    (X + MULT(X, Y - 1))           Y%2!=0
+}
+
+/*
+Time Complexity = O(log Y)
+Space Complexity = O(log Y) for call stack
+*/

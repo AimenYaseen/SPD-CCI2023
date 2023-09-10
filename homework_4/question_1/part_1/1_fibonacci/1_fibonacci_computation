@@ -1,0 +1,11 @@
+// Fibonacci Mathematical Computation
+
+F(n) = {
+    n                n=0 || n=1
+    F(n-1) + F(n-2)  n>=2
+}
+
+/*
+Time Complexity = O(2^n)
+Space Complexity = O(n)
+*/

@@ -1,0 +1,18 @@
+// Insertion Sort Mathematical Computation using Recursion
+
+ShiftAndInsert(arr, j, key) = {
+    return arr                              j < 0 or arr[j] <= key
+    arr[j + 1] = arr[j]
+    return ShiftAndInsert(arr, j - 1, key)
+}
+
+InsertionSort(arr, n, i) = {
+    return arr                          i >= n 
+    ShiftAndInsert(arr, i-1, arr[i])
+    return InsertionSort(arr, n, i + 1)
+}
+
+/*
+Time Complexity = O(n^2)
+Space Complexity = O(n)
+*/

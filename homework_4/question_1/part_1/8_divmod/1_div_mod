@@ -1,0 +1,11 @@
+// Division and Modulo Computation using Recursion
+
+DivMod(A, B, quotient) = {
+    return (quotient, A)           if A < B
+    return DivMod(A - B, B, quotient + 1)
+}
+
+/*
+Time Complexity = O(B)
+Space Complexity = O(B)
+*/

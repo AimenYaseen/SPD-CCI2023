@@ -1,0 +1,18 @@
+// Bubble Sort Mathematical Computation using Recursion
+
+BubbleSortPass(arr, n, i) = {
+    return arr                            if i >= n - 1
+    swap(arr[i], arr[i + 1])              if arr[i] > arr[i + 1]
+    return BubbleSortPass(arr, n, i + 1)  if i < n - 1
+}
+
+BubbleSort(arr, n) = {
+    return arr                     if n <= 1
+    BubbleSortPass(arr, n, 0)
+    return BubbleSort(arr, n - 1)
+}
+
+/*
+Time Complexity = O(n^2)
+Space Complexity = O(n)
+*/

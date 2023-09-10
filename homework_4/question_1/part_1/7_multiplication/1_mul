@@ -1,0 +1,11 @@
+// MULT(X, Y) Mathematical Computation
+
+MULT(X, Y) = {
+    0                       Y = 0
+    ADD(X, MULT(X, Y - 1))  Y>1
+}
+
+/*
+Time Complexity = O(Y)
+Space Complexity = O(Y)
+*/
