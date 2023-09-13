@@ -1,0 +1,22 @@
+// Recurrence
+
+T(n) = 3T(2n/3) + 1
+
+first_level: 1
+second_level: 3(2n/3) = 2n
+
+// increasing
+3^log_3/2(n)
+n^log_3/2(3) // log_3/2(3) ~ 2
+
+// base change rule
+log_3/2(3) = log_2(3) / log_2(3/2)   // log2(3) / log2(3/2) ~ 2.70951129135
+log2(3) ≈ 1.58496
+log2(3/2) ≈ 0.58496
+
+So, log2(3) / log2(3/2) ≈ 1.58496 / 0.58496 ≈ 2.70951.
+
+n^2
+O(n^2)
+
+// so it does not beat nlogn bound.

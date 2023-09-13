@@ -1,0 +1,40 @@
+MatchLocksAndKeys(locks, keys)
+    if length(locks) == 0
+        return
+
+    # Randomly choose a lock from locks
+    random_lock = locks[random_index(locks)]
+
+    # Partition keys based on the random_lock
+    smaller_keys = []
+    larger_keys = []
+    matching_key = None
+    
+    for key in keys
+        if key fits in random_lock
+            matching_key = key
+        else if key < random_lock
+            smaller_keys.append(key)
+        else
+            larger_keys.append(key)
+
+    # Partition locks based on the matching_key
+    smaller_locks = []
+    larger_locks = []
+    
+    for lock in locks
+        if lock == random_lock
+            continue
+        if matching_key fits in lock
+            matching_lock = lock
+        else if lock < matching_key
+            smaller_locks.append(lock)
+        else
+            larger_locks.append(lock)
+
+    # Recursively match sublocks and subkeys
+    matchLocksAndKeys(smaller_locks, smaller_keys)
+    matchLocksAndKeys(larger_locks, larger_keys)
+
+# Call the function with the initial locks and keys
+matchLocksAndKeys(locks, keys)

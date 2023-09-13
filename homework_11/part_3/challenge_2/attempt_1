@@ -1,0 +1,39 @@
+// it will fail when new images got empty
+
+
+EqualImage(image_1, image_2)
+    if (image_1 == image_2)
+        return true
+    return false
+
+
+FindMajorityImage(images)
+    // base case
+    n = images.size
+    if (n == 1)
+        return images[1]
+
+    newImages = []
+
+    for i from 1 to n-1 by 2
+        if(EqualImage(images[i], images[i+1]))
+            newImages.add(images[i])
+
+    if(n % 2 == 1)
+        newImages.add(images[n])
+
+    return FindMajorityImage(newImages)
+
+function main():
+    images = list of images
+    majorityImage = FindMajorityImage(images)
+    
+    count = 0
+    for i from 1 to n by 1
+        if(EqualImage(images[i], majorityImage))
+            count++
+    
+    if(count > images.size/2)
+        return majorityImage
+    return None
+    
